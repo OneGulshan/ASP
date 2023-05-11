@@ -1,0 +1,326 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B1E4D8D-3389-478F-81EF-716B36048741}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JobPortal</RootNamespace>
+    <AssemblyName>JobPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44339</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplyForm_JS.aspx" />
+    <Content Include="Approve.png" />
+    <Content Include="Chgpass_Adm.aspx" />
+    <Content Include="Chgpass_JR.aspx" />
+    <Content Include="Chgpass_JS.aspx" />
+    <Content Include="Footer.ascx" />
+    <Content Include="Header.ascx" />
+    <Content Include="Hiring.jpg" />
+    <Content Include="Home_Adm.aspx" />
+    <Content Include="Home_JR.aspx" />
+    <Content Include="Home_JS.aspx" />
+    <Content Include="images\item-pointer-mover.gif" />
+    <Content Include="images\item-pointer.gif" />
+    <Content Include="images\lava.gif" />
+    <Content Include="images\lava.png" />
+    <Content Include="images\main-bg.png" />
+    <Content Include="images\main-delimiter.png" />
+    <Content Include="JobPost_JR.aspx" />
+    <Content Include="JobView_JS.aspx" />
+    <Content Include="jquery.js" />
+    <Content Include="JR.aspx" />
+    <Content Include="JS.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="menu.css" />
+    <Content Include="menu.js" />
+    <Content Include="Mng_JP.aspx" />
+    <Content Include="Mng_JP_byJR.aspx" />
+    <Content Include="Mng_JR.aspx" />
+    <Content Include="Mng_JS.aspx" />
+    <Content Include="Notes.txt" />
+    <Content Include="Profile\abd.png" />
+    <Content Include="Profile\Car.jpg" />
+    <Content Include="Profile\image-20220531-150318.png" />
+    <Content Include="Profile\Passport photo 2019.jpg" />
+    <Content Include="Profile\Passport photo 2020.png" />
+    <Content Include="Profile\Profile.jpg" />
+    <Content Include="Profile\Profile_Photo.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adm.Master.cs">
+      <DependentUpon>Adm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adm.Master.designer.cs">
+      <DependentUpon>Adm.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyForm_JS.aspx.cs">
+      <DependentUpon>ApplyForm_JS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplyForm_JS.aspx.designer.cs">
+      <DependentUpon>ApplyForm_JS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chgpass_Adm.aspx.cs">
+      <DependentUpon>Chgpass_Adm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chgpass_Adm.aspx.designer.cs">
+      <DependentUpon>Chgpass_Adm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chgpass_JR.aspx.cs">
+      <DependentUpon>Chgpass_JR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chgpass_JR.aspx.designer.cs">
+      <DependentUpon>Chgpass_JR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chgpass_JS.aspx.cs">
+      <DependentUpon>Chgpass_JS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chgpass_JS.aspx.designer.cs">
+      <DependentUpon>Chgpass_JS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Adm.aspx.cs">
+      <DependentUpon>Home_Adm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home_Adm.aspx.designer.cs">
+      <DependentUpon>Home_Adm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home_JR.aspx.cs">
+      <DependentUpon>Home_JR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home_JR.aspx.designer.cs">
+      <DependentUpon>Home_JR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home_JS.aspx.cs">
+      <DependentUpon>Home_JS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home_JS.aspx.designer.cs">
+      <DependentUpon>Home_JS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobPost_JR.aspx.cs">
+      <DependentUpon>JobPost_JR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobPost_JR.aspx.designer.cs">
+      <DependentUpon>JobPost_JR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobView_JS.aspx.cs">
+      <DependentUpon>JobView_JS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobView_JS.aspx.designer.cs">
+      <DependentUpon>JobView_JS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JR.aspx.cs">
+      <DependentUpon>JR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JR.aspx.designer.cs">
+      <DependentUpon>JR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JR.Master.cs">
+      <DependentUpon>JR.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JR.Master.designer.cs">
+      <DependentUpon>JR.Master</DependentUpon>
+    </Compile>
+    <Compile Include="JS.aspx.cs">
+      <DependentUpon>JS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JS.aspx.designer.cs">
+      <DependentUpon>JS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JS.Master.cs">
+      <DependentUpon>JS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JS.Master.designer.cs">
+      <DependentUpon>JS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mng_JP.aspx.cs">
+      <DependentUpon>Mng_JP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mng_JP.aspx.designer.cs">
+      <DependentUpon>Mng_JP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mng_JP_byJR.aspx.cs">
+      <DependentUpon>Mng_JP_byJR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mng_JP_byJR.aspx.designer.cs">
+      <DependentUpon>Mng_JP_byJR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mng_JR.aspx.cs">
+      <DependentUpon>Mng_JR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mng_JR.aspx.designer.cs">
+      <DependentUpon>Mng_JR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mng_JS.aspx.cs">
+      <DependentUpon>Mng_JS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mng_JS.aspx.designer.cs">
+      <DependentUpon>Mng_JS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Adm.Master" />
+    <Content Include="Default.Master" />
+    <Content Include="JR.Master" />
+    <Content Include="JS.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51604</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44339/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

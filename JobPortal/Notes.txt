@@ -1,0 +1,10 @@
+A Website with DB is a Compleate Site, Get Scrip of Your site and paste it in
+Your project.
+In camel case every first letter big without space
+
+- Follow Mukesh Murugan For Learning Programming https://codewithmukesh.com/
+- Here is a List of Important Tips to Write Clean C# Code.
+https://codewithmukesh.com/blog/write-clean-csharp-code/
+
+Note:- If this error occurs :- Could not find file '..\bin\roslyn\csc.exe'. after publishing to server(github) use this
+- Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r

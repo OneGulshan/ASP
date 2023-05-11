@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="JS.Master.cs" Inherits="JobPortal.Employee" %>
+<%@ Register Src="~/Header.ascx" TagName="header" TagPrefix="user" %>
+<%@ Register Src="~/Footer.ascx" TagName="footer" TagPrefix="user" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">   
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td><user:header ID="h1" runat="server"></user:header></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="menu">
+	                	<ul class="menu">
+	                		<li class="last"><a href="Home_JS.aspx"><span>Home</span></a></li>                            
+                            <li class="last"><a href="JobView_JS.aspx"><span>View Jobs</span></a></li>
+                            <li class="last"><a href="Chgpass_JS.aspx"><span>Change Password</span></a></li>
+                            <li class="last"><a href="Logout.aspx"><span>Logout</span></a></li>
+	                	</ul>
+	                </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><center><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder></center></td>
+                </tr>
+
+                <tr>
+                    <td><user:footer ID="f1" runat="server" /></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
