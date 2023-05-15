@@ -19,46 +19,56 @@ namespace ProjectBatch1
             }
         }
 
+        public void Clear()
+        {
+            txtbody.Text = "";
+            txtfromemail.Text = "";
+            txtpassword.Text = "";
+            txtsubject.Text = "";
+            txttoemail.Text = "";
+        }
+
         protected void Btn_sendemail_Click(object sender, EventArgs e)
         {
-            string username = "gulshankumar.mailid@gmail.com";
-            string password = "ndiwqxcoyumiqvjn";
-            ICredentialsByHost credentials = new NetworkCredential(username, password);
+            MailMessage message = new MailMessage();
+            SmtpClient smtpClientsmtp = new SmtpClient();
+            message.From = new MailAddress("gulshankumar.mailid01@gmail.com");
+            message.To.Add(txttoemail.Text);
+            message.Subject = "Test Mail";
 
-            SmtpClient smtpClient = new SmtpClient()
-            {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                Credentials = credentials,
-                UseDefaultCredentials = true
-            };
 
-            MailMessage mail = new MailMessage();
-            mail.From = new MailAddress(username);
-            mail.To.Add(username);
-            mail.Subject = "Testing less secure apps new configuration.";
-            mail.Body = "Hello stackoveflow!";
-
-            smtpClient.Send(mail);
-
-            //MailAddress bcc = new MailAddress("gulshankumar.mailid01@gmail.com");
-            //using (MailMessage mm = new MailMessage(txtfromemail.Text, txttoemail.Text))
-            //{
-            //    mm.Subject = txtsubject.Text;
-            //    mm.Body = txtbody.Text;
-            //    mm.CC.Add(bcc);
-            //    mm.IsBodyHtml = true;
-            //    SmtpClient smtp = new SmtpClient();
-            //    smtp.Host = "smtp.google.com";
-            //    smtp.EnableSsl = true;
-            //    NetworkCredential NetworkCred = new NetworkCredential(txtfromemail.Text, txtpassword.Text);
-            //    smtp.UseDefaultCredentials = false;
-            //    smtp.Credentials = NetworkCred;
-            //    smtp.Port = 587; 
-            //    smtp.Send(mm);
-            //    Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('Mail Send successfully');", true);
-            //}
+            string MailBody = "<!DOCTYPE html>" +
+            "<body style=\"display:flex; justify-content:center;\">" +
+            "<div style=\"min-height: 10rem; width: 40rem; background-color: aqua; padding: 1rem; border-radius: 10px;\">" +
+            "<table style=\"width:100%; color:white; border: 1px solid black; text-align: center;\">" +
+             "<thead style=\"color:black;\">" +
+                "<tr>" +
+                   " <th style=\"border: 1px solid black;\"> Name </th>" +
+                   " <th style=\"border: 1px solid black;\"> Email </th>" +
+                   " <th style=\"border: 1px solid black;\"> Message </th>" +
+                "</tr>" +
+             "</thead>" +
+            "<tbody>" +
+                "<tr>" +
+                   $" <td style=\"border: 1px solid black;\"> {txtbody.Text} </td>" +
+                    $"<td style=\"border: 1px solid black;\"> {txtfromemail.Text} </td>" +
+                   $" <td style=\"border: 1px solid black;\"> {txtsubject.Text} </td>" +
+                "</tr>" +
+            "</tbody>" +
+        "</table>" +
+        "</body>" +
+        "</html>";
+            message.Body = MailBody;
+            message.IsBodyHtml = true;
+            smtpClientsmtp.Port = 587;
+            smtpClientsmtp.Host = "smtp.gmail.com";
+            smtpClientsmtp.EnableSsl = true;
+            smtpClientsmtp.UseDefaultCredentials = false;
+            smtpClientsmtp.Credentials = new NetworkCredential("gulshankumar.mailid01@gmail.com", "aeljomqrgsaqgtkv");
+            smtpClientsmtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtpClientsmtp.Send(message);
+            Clear();
+            Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('Mail Send successfully');", true);
         }
     }
 }
